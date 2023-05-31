@@ -17,8 +17,8 @@ $dotenv->safeLoad();
 </head>
 <body>
 <div class="container m-6">
-    <?php echo '<h1>Hello World!</h1>';
-    Helpers::showText("test text...");
+    <?php echo '<h1 class="text-red-600">Hello World!</h1>';
+    Helpers::showText("test text...", 'text-lg text-green-600');
     echo "<h3>{$_ENV['DATABASE_PORT']}</h3>"; ?>
 </div>
 </body>

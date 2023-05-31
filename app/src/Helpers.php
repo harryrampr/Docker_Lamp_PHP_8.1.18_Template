@@ -4,8 +4,8 @@ namespace App;
 
 class Helpers
 {
-    public static function showText(string $text): void
+    public static function showText(string $text, string $tagClass): void
     {
-        echo "<p>$text</p>";
+        echo "<p class=\"$tagClass\">$text</p>";
     }
 }
