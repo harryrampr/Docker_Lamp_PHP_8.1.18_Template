@@ -3,11 +3,23 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 use App\Helpers;
 use Dotenv\Dotenv;
-use App\EnvWriter;
 
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../../', 'app.env');
 $dotenv->safeLoad();
-
-echo '<h1>Hello World!</h1>';
-Helpers::showText("test text...");
-echo "<h5>{$_ENV['DATABASE_PORT']}</h5>";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container m-6">
+    <?php echo '<h1>Hello World!</h1>';
+    Helpers::showText("test text...");
+    echo "<h3>{$_ENV['DATABASE_PORT']}</h3>"; ?>
+</div>
+</body>
+</html>

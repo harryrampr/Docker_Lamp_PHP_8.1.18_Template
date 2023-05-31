@@ -8,7 +8,7 @@ of time during development, testing and maintenance. If you aren't using PhpStor
 30 days](https://www.jetbrains.com/phpstorm/download/#section=windows).
 
 We have curated a project template for PHP 8.1.x development. You don't need PhpStorm to use our template, just remove
-the `.idea` folder containing PhpStorm configuration.
+the`.idea`folder containing PhpStorm configuration.
 
 #### Template Features:
 
@@ -23,19 +23,22 @@ the `.idea` folder containing PhpStorm configuration.
 - Support for initial database dump
 - Persistent data on database container
 - Support for Unit Testing with Coverage Report
+- Support for NPM Package Manager
+- Tailwind 3 CSS
 
 #### Installation:
 
-1. After downloading the template, go to PhpStorm Settings and select the `Default PHP Interpreter`. Also,
-   setup `Composer`
-   execs location.
+1. Download or clone template from repository. If you decide to`clone`, you should also run`git remote remove origin`do
+   detach from original repository.
 
-2. Update necessary info at `composer.json` file, then run `composer install`.
+2. Go to PhpStorm Settings and select the`Default PHP Interpreter`. Also, setup`Composer`execs location.
 
-3. To configure the Docker LAMP, just copy sample `.env` files to new files without the "sample" prefix. Then only make
+3. Update necessary info at`composer.json`file, then run`composer install`.
+
+4. To configure the Docker LAMP, just copy sample`.env`files to new files without the "sample" prefix. Then only make
    important changes to these files.
 
-    1. For `.env` file, most defaults should work. If necessary replace values of:
+    1. For`.env`file, most defaults should work. If necessary replace values of:
         - `SERVER_HTTP_HOST_PORT`
         - `SERVER_HTTPS_HOST_PORT`
         - `DB_CONTAINER_HOST_PORT`
@@ -43,7 +46,7 @@ the `.idea` folder containing PhpStorm configuration.
         - `DB_CONTAINER_VOLUME_NAME`(Must update)
         - `DB_CONTAINER_VOLUME_EXTERNAL`
 
-    2. For `app.env` file, most defaults should work. If necessary replace values of:
+    2. For`app.env`file, most defaults should work. If necessary replace values of:
         - `DATABASE_HOST`(Must update)
         - `DATABASE_PORT`
         - `DATABASE_USER_NAME`
@@ -55,14 +58,16 @@ the `.idea` folder containing PhpStorm configuration.
    for
    code testing, also allows using host machine's PHP and PhpStorm Build-in Preview without any configuration problems.*
 
-4. Run all PHPUnit tests located at `app/tests` folder to verify template & containers configuration.
+5. Run all PHPUnit tests located at`app/tests`folder to verify template & containers configuration.
 
-5. Add any necessary SQL dumps to the db_dumps folder, they will be imported during the building stage of database
+6. Add any necessary SQL dumps to the db_dumps folder, they will be imported during the building stage of database
    container.
 
-6. To start the LAMP containers, run these commands at IDE's Terminal.
+7. To start the LAMP containers, run these commands at IDE's Terminal:
 
     - `docker compose build`
     - `docker compose up -d`
 
-7. When necessary, run `docker compose down`to stop the containers.
+8. When necessary, run`docker compose down`to stop the containers.
+9. To update Tailwind changes,
+   run`npx tailwindcss -i ./app/src/css/tailwind_input.css -o ./app/public/css/main.css --watch`at IDE's Terminal.
