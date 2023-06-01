@@ -32,8 +32,9 @@ the`.idea`folder containing PhpStorm configuration.
    Git Bash the following commands:
    - `rm -rf .git`
    - `git init`
+   - `cp sample.env .env`
+   - `cp sample.app.env app.env`
    - `git add -A`
-   - `git remote remove origin`
    - `git commit -m "Initial commit"`
 
 2. Open project with PhpStorm and go to Settings->PHP, select the`Default PHP Interpreter`. Also, setup`Composer`execs
@@ -41,8 +42,7 @@ the`.idea`folder containing PhpStorm configuration.
 
 3. Update necessary info at`composer.json`file, then run`composer install`.
 
-4. To configure the Docker LAMP, just copy sample`.env`files to new files without the "sample" prefix. Then only make
-   important changes to these files.
+4. To configure the Docker LAMP, just update `Environmental Variables` values at following files:
 
     1. For`.env`file, most defaults should work. If necessary replace values of:
         - `SERVER_HTTP_HOST_PORT`
