@@ -28,10 +28,11 @@ the`.idea`folder containing PhpStorm configuration.
 
 #### Installation:
 
-1. Download or clone template from repository. To remove git history from template, run`rm -rf .git` at Terminal while
-   inside project root.
+1. Download or clone template from repository. To remove git history from template, run`rm -rf .git` with Terminal or
+   Git Bash while inside project folder. Then run`git init`and`git add -A`.
 
-2. Go to PhpStorm Settings and select the`Default PHP Interpreter`. Also, setup`Composer`execs location.
+2. Open project with PhpStorm and go to Settings->PHP, select the`Default PHP Interpreter`. Also, setup`Composer`execs
+   location.
 
 3. Update necessary info at`composer.json`file, then run`composer install`.
 
