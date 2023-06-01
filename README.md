@@ -28,8 +28,8 @@ the`.idea`folder containing PhpStorm configuration.
 
 #### Installation:
 
-1. Download or clone template from repository. If you decide to`clone`, you should also run`git remote remove origin`do
-   detach from original repository.
+1. Download or clone template from repository. To remove git history from template, run`rm -rf .git` at Terminal while
+   inside project root.
 
 2. Go to PhpStorm Settings and select the`Default PHP Interpreter`. Also, setup`Composer`execs location.
 
@@ -57,17 +57,17 @@ the`.idea`folder containing PhpStorm configuration.
    DATABASE_HOST and copy value of DB_CONTAINER_HOST_PORT to DATABASE_PORT. These changes will allow using Docker LAMP
    for
    code testing, also allows using host machine's PHP and PhpStorm Build-in Preview without any configuration problems.*
+5. Run `npm install` for the `node_modules` directory to be created at project root.
+6. Run all PHPUnit tests located at`app/tests`folder to verify template setup & containers configuration.
 
-5. Run all PHPUnit tests located at`app/tests`folder to verify template & containers configuration.
-
-6. Add any necessary SQL dumps to the db_dumps folder, they will be imported during the building stage of database
+7. Add any necessary SQL dumps to the db_dumps folder, they will be imported during the building stage of database
    container.
 
-7. To start the LAMP containers, run these commands at IDE's Terminal:
+8. To start the LAMP containers, run these commands at IDE's Terminal:
 
     - `docker compose build`
     - `docker compose up -d`
 
-8. When necessary, run`docker compose down`to stop the containers.
-9. To update Tailwind changes,
-   run`npx tailwindcss -i ./app/src/css/tailwind_input.css -o ./app/public/css/main.css --watch`at IDE's Terminal.
+9. When necessary, run`docker compose down`to stop the containers.
+10. To update Tailwind changes,
+    run`npx tailwindcss -i ./app/src/css/tailwind_input.css -o ./app/public/css/main.css --watch`at IDE's Terminal.

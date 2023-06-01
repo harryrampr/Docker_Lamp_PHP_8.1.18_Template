@@ -82,6 +82,22 @@ class EnvironmentVariablesAndArgsTest extends TestCase
     }
 
     /**
+     * Test if DB_CONTAINER_VOLUME_EXTERNAL environment variable is set at .env file
+     *
+     * @return void
+     */
+    public function testDbContainerVolumeExternalEnvVarS(): void
+    {
+        $varValue = $_ENV['DB_CONTAINER_VOLUME_EXTERNAL'];
+        $validValues = ['y', 'n', 'yes', 'no', 'true', 'false', 'on', 'off'];
+
+        // Value must be valid
+        $this->assertContains($varValue, $validValues);
+        // .env file must contain DB_CONTAINER_VOLUME_EXTERNAL variable
+        $this->assertStringContainsString('DB_CONTAINER_VOLUME_EXTERNAL=' . $varValue, $this->dotEnvFileContent);
+    }
+
+    /**
      * Setup the test environment.
      *
      * @return void
