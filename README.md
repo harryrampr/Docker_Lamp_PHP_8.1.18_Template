@@ -34,6 +34,7 @@ the`.idea`folder containing PhpStorm configuration.
    - `git init`
    - `git add -A`
    - `git remote remove origin`
+   - `git commit -m "Initial commit"`
 
 2. Open project with PhpStorm and go to Settings->PHP, select the`Default PHP Interpreter`. Also, setup`Composer`execs
    location.
