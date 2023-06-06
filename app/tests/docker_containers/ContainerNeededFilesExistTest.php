@@ -6,11 +6,11 @@ namespace Tests\docker_containers;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class TestContainerNeededFilesExist
+ * Class ContainerNeededFilesExistTest
  *
  * Test case to verify the existence of necessary folders and files to create LAMP containers.
  */
-class TestContainerNeededFilesExist extends TestCase
+class ContainerNeededFilesExistTest extends TestCase
 {
     /**
      * Test if the app/public directory exists at the root of the project.

@@ -6,11 +6,11 @@ namespace Tests;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class TestContainerNeededFilesExist
+ * Class ContainerNeededFilesExistTest
  *
  * Test case to verify the existence of necessary folders and files at the project.
  */
-class TestBasicProjectFileStructureExist extends TestCase
+class BasicProjectFileStructureExistTest extends TestCase
 {
     /**
      * Test if the app directory exists at the root of the project.
